@@ -1,0 +1,30 @@
+2012/10/19 00:58:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/gii/GiiModule.php:169
+Stack trace:
+#0 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/web/CWebApplication.php(283): CController->run('')
+#2 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
+#3 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/fastvps/data/www/test.spb.fastvps.ru/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/?r=gii
+---
+2012/10/19 00:59:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/gii/GiiModule.php:169
+Stack trace:
+#0 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/web/CWebApplication.php(283): CController->run('')
+#2 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
+#3 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/fastvps/data/www/test.spb.fastvps.ru/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/?r=gii
+---
+2012/10/19 01:01:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/gii/GiiModule.php:169
+Stack trace:
+#0 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/web/CController.php(264): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/web/CWebApplication.php(283): CController->run('')
+#2 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/web/CWebApplication.php(142): CWebApplication->runController('gii')
+#3 /var/www/fastvps/data/www/test.spb.fastvps.ru/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /var/www/fastvps/data/www/test.spb.fastvps.ru/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/?r=gii
+---
