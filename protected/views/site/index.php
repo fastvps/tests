@@ -4,17 +4,55 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
+<h1>FastVPS тесты</h1>
+<?php if (Yii::app()->user->isGuest): ?>
+    <p>Вы не авторизованы. Пожалуйста, авторизуйтесь!</p>
+<div class="form">
+    <?php $form=$this->beginWidget('CActiveForm', array(
+    'id'=>'login-form',
+    'action' => Yii::app()->createUrl('site/login'),
+    'enableClientValidation'=>true,
+    'clientOptions'=>array(
+        'validateOnSubmit'=>true,
+    ),
+)); ?>
 
-<p>Congratulations! You have successfully created your Yii application.</p>
+    <div class="row">
+        <?php echo $form->label($model,'email'); ?>
+        <?php echo $form->textField($model,'email'); ?>
+        <?php echo $form->error($model,'email'); ?>
+    </div>
 
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
+    <div class="row">
+        <?php echo $form->label($model,'pass'); ?>
+        <?php echo $form->passwordField($model,'pass'); ?>
+        <?php echo $form->error($model,'pass'); ?>
+    </div>
 
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+    <div class="row buttons">
+        <?php echo CHtml::submitButton('Войти'); ?>
+    </div>
+
+    <?php $this->endWidget(); ?>
+</div><!-- form -->
+<?php else: ?>
+    <p>Привет, <?=Yii::app()->user->username; ?>!</p>
+        <? if(Yii::app()->user->isAdmin): ?>
+        <p>Твой уровень <b>администратор</b>.</p>
+            <?php if (!Yii::app()->user->done):  ?>
+            <p>Ты еще не прошел тест. <?=CHtml::link('Пройти',Yii::app()->createUrl('site/test'))?>.</p>
+                <?php else: ?>
+            <p>Тест пройден. Поздравляю! Ты можешь посмотреть <?=CHtml::link('результаты',array('site/result'));?>.</p>
+            <?php endif; ?>
+
+            <p>Ты можешь:<br/>
+                <?=CHtml::link('управлять пользователями',Yii::app()->createUrl('user/admin'))?><br/>
+                <?=CHtml::link('управлять вопросами',Yii::app()->createUrl('question/admin'))?><br/>
+                <?=CHtml::link('смотреть статистику',Yii::app()->createUrl('site/stats'))?>
+
+            </p>
+
+        <? endif; ?>
+<?php endif; ?>
+
+

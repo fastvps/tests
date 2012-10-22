@@ -28,3 +28,391 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/?r=gii
 ---
+2012/10/19 14:23:45 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in Z:\home\localhost\www\test\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\helpers\CHtml.php(2158): CComponent->__get('username')
+#1 Z:\home\localhost\www\test\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 Z:\home\localhost\www\test\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 Z:\home\localhost\www\test\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 Z:\home\localhost\www\test\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#6 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#9 Z:\home\localhost\www\test\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#11 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 Z:\home\localhost\www\test\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('login')
+#15 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#16 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test/index.php?r=site/login
+HTTP_REFERER=http://localhost/test/
+---
+2012/10/19 14:45:18 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.email" is not defined.' in Z:\home\localhost\www\test\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\test\protected\components\UserIdentity.php(22): CComponent->__get('email')
+#1 Z:\home\localhost\www\test\protected\models\LoginForm.php(48): UserIdentity->authenticate()
+#2 Z:\home\localhost\www\test\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('pass', Array)
+#3 Z:\home\localhost\www\test\framework\validators\CValidator.php(214): CInlineValidator->validateAttribute(Object(LoginForm), 'pass')
+#4 Z:\home\localhost\www\test\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#5 Z:\home\localhost\www\test\protected\controllers\SiteController.php(94): CModel->validate()
+#6 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 Z:\home\localhost\www\test\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('login')
+#11 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#12 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/test/index.php?r=site/login
+HTTP_REFERER=http://localhost/test/
+---
+2012/10/19 14:45:51 [error] [exception.CException] exception 'CException' with message 'Property "LoginForm.username" is not defined.' in Z:\home\localhost\www\test\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\helpers\CHtml.php(2158): CComponent->__get('username')
+#1 Z:\home\localhost\www\test\framework\web\helpers\CHtml.php(1887): CHtml::resolveValue(Object(LoginForm), 'username')
+#2 Z:\home\localhost\www\test\framework\web\helpers\CHtml.php(1217): CHtml::activeInputField('text', Object(LoginForm), 'username', Array)
+#3 Z:\home\localhost\www\test\framework\web\widgets\CActiveForm.php(658): CHtml::activeTextField(Object(LoginForm), 'username', Array)
+#4 Z:\home\localhost\www\test\protected\views\site\login.php(29): CActiveForm->textField(Object(LoginForm), 'username')
+#5 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#6 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#7 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('login', Array, true)
+#9 Z:\home\localhost\www\test\protected\controllers\SiteController.php(98): CController->render('login', Array)
+#10 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#11 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 Z:\home\localhost\www\test\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('login')
+#15 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#16 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/test/index.php?r=site/login
+HTTP_REFERER=http://localhost/test/
+---
+2012/10/19 14:53:01 [error] [php] session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent (Z:\home\localhost\www\test\framework\web\CHttpSession.php:182)
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\auth\CWebUser.php(228): CWebUser->changeIdentity()
+#1 Z:\home\localhost\www\test\protected\models\LoginForm.php(67): CWebUser->login()
+#2 Z:\home\localhost\www\test\protected\controllers\SiteController.php(94): LoginForm->login()
+#3 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#4 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 Z:\home\localhost\www\test\framework\web\CController.php(287): SiteController->runAction()
+#6 Z:\home\localhost\www\test\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): SiteController->run()
+#8 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#9 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\test\index.php(13): CWebApplication->run()
+REQUEST_URI=/test/index.php?r=site/login
+in Z:\home\localhost\www\test\protected\models\LoginForm.php (67)
+in Z:\home\localhost\www\test\protected\controllers\SiteController.php (94)
+in Z:\home\localhost\www\test\index.php (13)
+2012/10/19 14:54:37 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in Z:\home\localhost\www\test\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\auth\CWebUser.php(141): CComponent->__get('username')
+#1 Z:\home\localhost\www\test\protected\views\site\index.php(39): CWebUser->__get('username')
+#2 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 Z:\home\localhost\www\test\protected\controllers\SiteController.php(32): CController->render('index', Array)
+#7 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#8 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\test\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('')
+#12 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#13 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/test/index.php
+HTTP_REFERER=http://localhost/test/index.php?r=site/login
+---
+2012/10/19 14:54:43 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.email" is not defined.' in Z:\home\localhost\www\test\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\auth\CWebUser.php(141): CComponent->__get('email')
+#1 Z:\home\localhost\www\test\protected\views\site\index.php(39): CWebUser->__get('email')
+#2 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 Z:\home\localhost\www\test\protected\controllers\SiteController.php(32): CController->render('index', Array)
+#7 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#8 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\test\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('')
+#12 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#13 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/test/index.php
+HTTP_REFERER=http://localhost/test/index.php?r=site/login
+---
+2012/10/19 14:59:40 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.username" is not defined.' in Z:\home\localhost\www\test\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\auth\CWebUser.php(141): CComponent->__get('username')
+#1 Z:\home\localhost\www\test\protected\views\site\index.php(39): CWebUser->__get('username')
+#2 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 Z:\home\localhost\www\test\protected\controllers\SiteController.php(32): CController->render('index', Array)
+#7 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#8 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\test\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('index')
+#12 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('site/index')
+#13 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/test/index.php?r=site/index
+---
+2012/10/19 15:30:20 [error] [exception.CException] exception 'CException' with message 'Property "WebUser.isAmin" is not defined.' in Z:\home\localhost\www\test\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\auth\CWebUser.php(141): CComponent->__get('isAmin')
+#1 Z:\home\localhost\www\test\protected\views\site\index.php(40): CWebUser->__get('isAmin')
+#2 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 Z:\home\localhost\www\test\protected\controllers\SiteController.php(32): CController->render('index', Array)
+#7 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#8 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\test\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('')
+#12 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#13 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/test/index.php
+HTTP_REFERER=http://localhost/test/index.php
+---
+2012/10/19 15:30:50 [error] [exception.CException] exception 'CException' with message 'Property "WebUser.isAmin" is not defined.' in Z:\home\localhost\www\test\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\auth\CWebUser.php(141): CComponent->__get('isAmin')
+#1 Z:\home\localhost\www\test\protected\views\site\index.php(40): CWebUser->__get('isAmin')
+#2 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 Z:\home\localhost\www\test\protected\controllers\SiteController.php(32): CController->render('index', Array)
+#7 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#8 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\test\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('')
+#12 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#13 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/test/index.php
+HTTP_REFERER=http://localhost/test/index.php
+---
+2012/10/19 15:31:03 [error] [exception.CException] exception 'CException' with message 'Property "WebUser.isAdmin" is not defined.' in Z:\home\localhost\www\test\framework\base\CComponent.php:131
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\auth\CWebUser.php(141): CComponent->__get('isAdmin')
+#1 Z:\home\localhost\www\test\protected\views\site\index.php(40): CWebUser->__get('isAdmin')
+#2 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#6 Z:\home\localhost\www\test\protected\controllers\SiteController.php(32): CController->render('index', Array)
+#7 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): SiteController->actionIndex()
+#8 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 Z:\home\localhost\www\test\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('')
+#12 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('')
+#13 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/test/index.php
+HTTP_REFERER=http://localhost/test/index.php
+---
+2012/10/19 15:31:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in Z:\home\localhost\www\test\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\CController.php(271): CController->missingAction('list')
+#1 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('list')
+#2 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('user/list')
+#3 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/index.php?r=user/list
+HTTP_REFERER=http://localhost/test/index.php
+---
+2012/10/19 15:33:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "list".' in Z:\home\localhost\www\test\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\CController.php(271): CController->missingAction('list')
+#1 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('list')
+#2 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('user/list')
+#3 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/index.php?r=user/list
+HTTP_REFERER=http://localhost/test/index.php
+---
+2012/10/19 15:37:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in Z:\home\localhost\www\test\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\CController.php(271): CController->missingAction('view')
+#1 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('view')
+#2 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('user/view')
+#3 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/index.php?r=user/view&id=2
+HTTP_REFERER=http://localhost/test/index.php?r=user/admin
+---
+2012/10/19 15:39:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in Z:\home\localhost\www\test\framework\web\CController.php:484
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\CController.php(271): CController->missingAction('create')
+#1 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('create')
+#2 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('user/create')
+#3 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/index.php?r=user/create
+HTTP_REFERER=http://localhost/test/index.php?r=user/admin
+---
+2012/10/21 17:21:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in Z:\home\localhost\www\test\framework\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(WebUser), 'You are not aut...')
+#1 Z:\home\localhost\www\test\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 Z:\home\localhost\www\test\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 Z:\home\localhost\www\test\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 Z:\home\localhost\www\test\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 Z:\home\localhost\www\test\framework\web\CController.php(292): CFilterChain->run()
+#6 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('admin')
+#8 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#9 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/test/index.php?r=user/admin
+HTTP_REFERER=http://localhost/test/
+---
+2012/10/21 17:41:33 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "textextFieldtArea".' in Z:\home\localhost\www\test\framework\base\CComponent.php:266
+Stack trace:
+#0 Z:\home\localhost\www\test\protected\views\user\_search.php(21): CComponent->__call('textextFieldtAr...', Array)
+#1 Z:\home\localhost\www\test\protected\views\user\_search.php(21): CActiveForm->textextFieldtArea(Object(User), 'email', Array)
+#2 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\protected\views\user\admin.php(35): CController->renderPartial('_search', Array)
+#6 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#10 Z:\home\localhost\www\test\protected\controllers\UserController.php(143): CController->render('admin', Array)
+#11 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): UserController->actionAdmin()
+#12 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 Z:\home\localhost\www\test\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 Z:\home\localhost\www\test\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 Z:\home\localhost\www\test\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 Z:\home\localhost\www\test\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 Z:\home\localhost\www\test\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 Z:\home\localhost\www\test\framework\web\CController.php(292): CFilterChain->run()
+#19 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('admin')
+#21 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#22 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/test/index.php?r=user/admin
+HTTP_REFERER=http://localhost/test/index.php
+---
+2012/10/21 17:41:43 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "textextFieldt".' in Z:\home\localhost\www\test\framework\base\CComponent.php:266
+Stack trace:
+#0 Z:\home\localhost\www\test\protected\views\user\_search.php(21): CComponent->__call('textextFieldt', Array)
+#1 Z:\home\localhost\www\test\protected\views\user\_search.php(21): CActiveForm->textextFieldt(Object(User), 'email', Array)
+#2 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\protected\views\user\admin.php(35): CController->renderPartial('_search', Array)
+#6 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#10 Z:\home\localhost\www\test\protected\controllers\UserController.php(143): CController->render('admin', Array)
+#11 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): UserController->actionAdmin()
+#12 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 Z:\home\localhost\www\test\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 Z:\home\localhost\www\test\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 Z:\home\localhost\www\test\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 Z:\home\localhost\www\test\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 Z:\home\localhost\www\test\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 Z:\home\localhost\www\test\framework\web\CController.php(292): CFilterChain->run()
+#19 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('admin')
+#21 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#22 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/test/index.php?r=user/admin
+HTTP_REFERER=http://localhost/test/index.php
+---
+2012/10/21 17:41:58 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "textextField".' in Z:\home\localhost\www\test\framework\base\CComponent.php:266
+Stack trace:
+#0 Z:\home\localhost\www\test\protected\views\user\_search.php(21): CComponent->__call('textextField', Array)
+#1 Z:\home\localhost\www\test\protected\views\user\_search.php(21): CActiveForm->textextField(Object(User), 'email', Array)
+#2 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#4 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\protected\views\user\admin.php(35): CController->renderPartial('_search', Array)
+#6 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#7 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#8 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#9 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#10 Z:\home\localhost\www\test\protected\controllers\UserController.php(143): CController->render('admin', Array)
+#11 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): UserController->actionAdmin()
+#12 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 Z:\home\localhost\www\test\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 Z:\home\localhost\www\test\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 Z:\home\localhost\www\test\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 Z:\home\localhost\www\test\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 Z:\home\localhost\www\test\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 Z:\home\localhost\www\test\framework\web\CController.php(292): CFilterChain->run()
+#19 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('admin')
+#21 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('user/admin')
+#22 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/test/index.php?r=user/admin
+HTTP_REFERER=http://localhost/test/index.php
+---
+2012/10/21 18:14:18 [error] [exception.CException] exception 'CException' with message 'Question and its behaviors do not have a method or closure named "search".' in Z:\home\localhost\www\test\framework\base\CComponent.php:266
+Stack trace:
+#0 Z:\home\localhost\www\test\framework\db\ar\CActiveRecord.php(226): CComponent->__call('search', Array)
+#1 Z:\home\localhost\www\test\protected\views\question\admin.php(45): CActiveRecord->__call('search', Array)
+#2 Z:\home\localhost\www\test\protected\views\question\admin.php(45): Question->search()
+#3 Z:\home\localhost\www\test\framework\web\CBaseController.php(127): require('Z:\home\localho...')
+#4 Z:\home\localhost\www\test\framework\web\CBaseController.php(96): CBaseController->renderInternal('Z:\home\localho...', Array, true)
+#5 Z:\home\localhost\www\test\framework\web\CController.php(870): CBaseController->renderFile('Z:\home\localho...', Array, true)
+#6 Z:\home\localhost\www\test\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#7 Z:\home\localhost\www\test\protected\controllers\QuestionController.php(143): CController->render('admin', Array)
+#8 Z:\home\localhost\www\test\framework\web\actions\CInlineAction.php(50): QuestionController->actionAdmin()
+#9 Z:\home\localhost\www\test\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 Z:\home\localhost\www\test\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 Z:\home\localhost\www\test\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#12 Z:\home\localhost\www\test\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#13 Z:\home\localhost\www\test\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#14 Z:\home\localhost\www\test\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 Z:\home\localhost\www\test\framework\web\CController.php(292): CFilterChain->run()
+#16 Z:\home\localhost\www\test\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 Z:\home\localhost\www\test\framework\web\CWebApplication.php(283): CController->run('admin')
+#18 Z:\home\localhost\www\test\framework\web\CWebApplication.php(142): CWebApplication->runController('question/admin')
+#19 Z:\home\localhost\www\test\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 Z:\home\localhost\www\test\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/test/index.php?r=question/admin
+HTTP_REFERER=http://localhost/test/index.php
+---

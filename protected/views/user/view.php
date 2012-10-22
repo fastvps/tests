@@ -3,20 +3,20 @@
 /* @var $model User */
 
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'Пользователи'=>array('index'),
 	$model->name,
 );
 
 $this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Create User', 'url'=>array('create')),
-	array('label'=>'Update User', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
+	array('label'=>'Список пользователей', 'url'=>array('index')),
+	array('label'=>'Добавить пользователя', 'url'=>array('create')),
+	array('label'=>'Обновить информацию о пользователе', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Удалить пользоваля', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Вы действительно хотите удалить пользователя?')),
+	array('label'=>'Управление пользователями', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View User #<?php echo $model->id; ?></h1>
+<h1>Просмотр пользователя #<?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -25,6 +25,7 @@ $this->menu=array(
 		'email',
 		'name',
 		'pass',
+		'admin',
 		'done',
 	),
 )); ?>

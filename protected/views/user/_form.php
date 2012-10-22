@@ -11,36 +11,42 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Поля, помеченные <span class="required">*</span> обязательны для заполнения.</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textArea($model,'email',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'email',array('size'=>32,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textArea($model,'name',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'name',array('size'=>32,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'pass'); ?>
-		<?php echo $form->passwordField($model,'pass'); ?>
+		<?php echo $form->textField($model,'pass',array('size'=>32,'maxlength'=>32)); ?>
 		<?php echo $form->error($model,'pass'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'done'); ?>
+		<?php echo $form->labelEx($model,'admin'); ?>
+		<?php echo $form->textField($model,'admin'); ?>
+		<?php echo $form->error($model,'admin'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'done'); ?>
 		<?php echo $form->textField($model,'done'); ?>
 		<?php echo $form->error($model,'done'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Создать' : 'Сохранить'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

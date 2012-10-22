@@ -21,6 +21,10 @@
 	<?php echo CHtml::encode($data->pass); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('admin')); ?>:</b>
+	<?php echo CHtml::encode($data->admin); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('done')); ?>:</b>
 	<?php echo CHtml::encode($data->done); ?>
 	<br />

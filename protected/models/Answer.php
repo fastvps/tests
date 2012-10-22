@@ -7,7 +7,7 @@
  * @property integer $id
  * @property integer $user_id
  * @property integer $question_id
- * @property string $aswer_name
+ * @property string $answer_name
  */
 class Answer extends CActiveRecord
 {
@@ -37,23 +37,21 @@ class Answer extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, question_id, aswer_name', 'required'),
+			array('user_id, question_id, answer_name', 'required'),
 			array('user_id, question_id', 'numerical', 'integerOnly'=>true),
-			array('aswer_name', 'length', 'max'=>1),
+			array('answer_name', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, user_id, question_id, aswer_name', 'safe', 'on'=>'search'),
+			array('id, user_id, question_id, answer_name', 'safe', 'on'=>'search'),
 		);
 	}
 
-	/**
-	 * @return array relational rules.
-	 */
 	public function relations()
 	{
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'question' => array(self::BELONGS_TO,'Question', 'question_id'),
 		);
 	}
 
@@ -64,9 +62,9 @@ class Answer extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'user_id' => 'User',
-			'question_id' => 'Question',
-			'aswer_name' => 'Aswer Name',
+			'user_id' => 'Номер пользователя',
+			'question_id' => 'Номер вопроса',
+			'answer_name' => 'Ответил',
 		);
 	}
 
@@ -84,7 +82,7 @@ class Answer extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('question_id',$this->question_id);
-		$criteria->compare('aswer_name',$this->aswer_name,true);
+		$criteria->compare('answer_name',$this->answer_name,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

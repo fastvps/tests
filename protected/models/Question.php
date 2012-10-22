@@ -65,11 +65,11 @@ class Question extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'text' => 'Text',
-			'variant_a' => 'Variant A',
-			'variant_b' => 'Variant B',
-			'variant_c' => 'Variant C',
-			'right_answer' => 'Right Answer',
+			'text' => 'Вопрос',
+			'variant_a' => 'Вариант ответа A',
+			'variant_b' => 'Вариант ответа B',
+			'variant_c' => 'Вариант ответа C',
+			'right_answer' => 'Правильный вариант ответа',
 		);
 	}
 

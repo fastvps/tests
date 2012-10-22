@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'FastVPS tests',
+	'name'=>'FastVPS система тестов',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -24,7 +24,7 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'4twiupi4',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('188.134.44.80'),
+			'ipFilters'=>array('127.0.0.1'),
 		),
 
 	),
@@ -34,7 +34,13 @@ return array(
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
+            'class' => 'WebUser',
 		),
+        'email'=>array(
+            'class'=>'application.extensions.email.Email',
+            'delivery'=>'php', //Will use the php mailing function.
+            //May also be set to 'debug' to instead dump the contents of the email into the view
+        ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -46,9 +52,6 @@ return array(
 			),
 		),
 		*/
-		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
 		// uncomment the following to use a MySQL database
 
 		'db'=>array(
@@ -57,6 +60,10 @@ return array(
 			'username' => 'fastvps_tests',
 			'password' => '4twiupi4',
 			'charset' => 'utf8',
+            // включаем профайлер
+            //'enableProfiling'=>true,
+            // показываем значения параметров
+            //'enableParamLogging' => true,
 		),
 
 		'errorHandler'=>array(
@@ -67,8 +74,8 @@ return array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
 				array(
-					'class'=>'CFileLogRoute',
-					'levels'=>'error, warning',
+					'class'=>'CProfileLogRoute',
+					'levels'=>'error',
 				),
 				// uncomment the following to show log messages on web pages
 				/*
@@ -84,6 +91,7 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'test@fastvps.ru',
+        'site' => 'test.spb.fastvps.ru',
 	),
 );

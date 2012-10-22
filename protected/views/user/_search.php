@@ -18,24 +18,13 @@
 
 	<div class="row">
 		<?php echo $form->label($model,'email'); ?>
-		<?php echo $form->textArea($model,'email',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'email'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textArea($model,'name',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textField($model,'name'); ?>
 	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'pass'); ?>
-		<?php echo $form->passwordField($model,'pass'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'done'); ?>
-		<?php echo $form->textField($model,'done'); ?>
-	</div>
-
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

@@ -8,16 +8,6 @@ class SiteController extends Controller
 	public function actions()
 	{
 		return array(
-			// captcha action renders the CAPTCHA image displayed on the contact page
-			'captcha'=>array(
-				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
-			),
-			// page action renders "static" pages stored under 'protected/views/site/pages'
-			// They can be accessed via: index.php?r=site/page&view=FileName
-			'page'=>array(
-				'class'=>'CViewAction',
-			),
 		);
 	}
 
@@ -27,10 +17,15 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+        $model=new LoginForm;
+
+		$this->render('index',array('model'=>$model));
 	}
+
+    public function actionAbout()
+    {
+        $this->render('about');
+    }
 
 	/**
 	 * This is the action to handle external exceptions.
@@ -49,28 +44,28 @@ class SiteController extends Controller
 	/**
 	 * Displays the contact page
 	 */
-	public function actionContact()
-	{
-		$model=new ContactForm;
-		if(isset($_POST['ContactForm']))
-		{
-			$model->attributes=$_POST['ContactForm'];
-			if($model->validate())
-			{
-				$name='=?UTF-8?B?'.base64_encode($model->name).'?=';
-				$subject='=?UTF-8?B?'.base64_encode($model->subject).'?=';
-				$headers="From: $name <{$model->email}>\r\n".
-					"Reply-To: {$model->email}\r\n".
-					"MIME-Version: 1.0\r\n".
-					"Content-type: text/plain; charset=UTF-8";
+	public function actionTest()
+    {
 
-				mail(Yii::app()->params['adminEmail'],$subject,$model->body,$headers);
-				Yii::app()->user->setFlash('contact','Thank you for contacting us. We will respond to you as soon as possible.');
-				$this->refresh();
-			}
-		}
-		$this->render('contact',array('model'=>$model));
-	}
+        $question = Question::model()->findAll();
+        $model = new Answer();
+        if(Yii::app()->request->isAjaxRequest){
+            $model->attributes= $_POST['Answer'];
+            $model->user_id=Yii::app()->user->id;
+            if ($model->save())
+                echo 'Ответ сохранен';
+            else
+                echo 'Ошибка';
+            Yii::app()->end();
+        }
+        else
+        {
+            if (!Yii::app()->user->done)
+                Answer::model()->deleteAllByAttributes(array('user_id' => Yii::app()->user->id));
+            $this->render('test', array('model'=>$model, 'question' => $question));
+        }
+
+    }
 
 	/**
 	 * Displays the login page
@@ -98,6 +93,26 @@ class SiteController extends Controller
 		$this->render('login',array('model'=>$model));
 	}
 
+    public function actionResult($id = null)
+    {
+        if ($id != null)
+        {
+            $model = Answer::model()->findAllByAttributes(array('user_id'=>$id));
+        }
+        else
+        {
+            $model = Answer::model()->findAllByAttributes(array('user_id'=>Yii::app()->user->id));
+        }
+
+        $this->render('result', array('model'=> $model, 'id' => $id));
+    }
+
+    public function actionStats()
+    {
+        $model = User::model()->findAll();
+        $this->render('stats', array('model'=>$model));
+    }
+
 	/**
 	 * Logs out the current user and redirect to homepage.
 	 */
@@ -106,4 +121,13 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+
+    protected function performAjaxValidation($model)
+    {
+        if(isset($_POST['ajax']) && $_POST['ajax']==='question-form')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+    }
 }
